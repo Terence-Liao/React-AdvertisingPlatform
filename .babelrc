@@ -1,0 +1,11 @@
+{
+  "env": {
+    "development": {
+      "presets" : [["@babel/preset-env",  {"useBuiltIns": "entry"}], "@babel/preset-react"],
+      "plugins" : ["react-hot-loader/babel","@babel/plugin-transform-runtime"]
+    },
+    "production": {
+      "presets" : [["@babel/preset-env", { "modules": false, "loose": true }], "@babel/preset-react"]
+    }
+  }
+}
