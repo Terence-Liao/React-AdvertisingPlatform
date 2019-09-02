@@ -17,6 +17,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -26,9 +29,10 @@
   <component name="ProjectId" id="1PzumGJPVISaNf3S14KUk3iIcy4" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="D:/reactExample/Junephone-react-cli" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -68,10 +72,22 @@
       <workItem from="1567072216948" duration="1443000" />
       <workItem from="1567129223130" duration="11552000" />
       <workItem from="1567149041196" duration="2925000" />
+      <workItem from="1567416308512" duration="1977000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

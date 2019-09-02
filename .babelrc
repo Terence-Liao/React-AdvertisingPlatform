@@ -1,7 +1,14 @@
 {
   "env": {
     "development": {
-      "presets" : [["@babel/preset-env",  {"useBuiltIns": "entry"}], "@babel/preset-react"],
+      "presets" : [["@babel/preset-env",   {
+          "useBuiltIns": "usage",
+          "corejs": "3.0.0",
+          "shippedProposals": true,
+          "targets": {
+            "node": "10.15"
+        }
+      }], "@babel/preset-react"],
       "plugins" : ["react-hot-loader/babel","@babel/plugin-transform-runtime"]
     },
     "production": {
