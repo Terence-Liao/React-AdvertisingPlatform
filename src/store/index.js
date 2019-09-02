@@ -5,7 +5,10 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import { persistStore } from 'redux-persist'
 import reducers from '@/reducers'
-import {createHistory} from 'history/createHashHistory'
+// import {createHistory} from 'history/createHashHistory'
+import createRootReducer from './reducers'
+import createHistory from 'history/createBrowserHistory';
+
 import { routerMiddleware } from 'react-router-redux'
 import createSagaMiddleware from 'redux-saga'
 import sagas from '@/sagas'
