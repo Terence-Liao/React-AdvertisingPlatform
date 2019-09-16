@@ -1,0 +1,11 @@
+{
+  "env": {
+    "development": {
+      "presets" : [ "@babel/preset-flow","@babel/preset-env","@babel/react"],
+      "plugins" : ["react-hot-loader/babel","@babel/plugin-transform-runtime"]
+    },
+    "production": {
+      "presets" : ["@babel/preset-env", "@babel/preset-react"]
+    }
+  }
+}
