@@ -1,10 +1,12 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import {CssBaseline} from "@material-ui/core";
+import { CssBaseline } from "@material-ui/core";
+import MenuAppBar from  './component/topBar.jsx'
 class App extends React.Component {
     render() {
-        return( <React.Fragment>
+        return(
+        <React.Fragment>
             <CssBaseline />
+            <MenuAppBar />
             hello!React
         </React.Fragment>)
     }
