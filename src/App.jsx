@@ -7,7 +7,6 @@ class App extends React.Component {
         <React.Fragment>
             <CssBaseline />
             <MenuAppBar />
-            hello!React
         </React.Fragment>)
     }
 }
