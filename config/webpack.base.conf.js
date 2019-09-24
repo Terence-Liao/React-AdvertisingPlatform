@@ -3,6 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const  HappyPack  = require('happypack');
 const { HappyThreadPool } = require('happypack');
+
+function resolve (dir) {
+    return path.join(__dirname, dir)
+}
+
 module.exports = {
     entry: './src/index.jsx',
     output: {
@@ -14,12 +19,13 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
-                include: path.resolve(__dirname, 'src')
+                include: path.resolve('./src'),
             },
             {
                 test: /\.js$/,
                 use: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                include: path.resolve('./src'),
             },
             {
                 test: /\.(gif|jpg|png|bmp|eot|woff|woff2|ttf|svg)/,
@@ -28,7 +34,7 @@ module.exports = {
                         loader: 'url-loader',
                         options: {
                             limit: 8192,
-                            outputPath: 'images'
+                            outputPath: 'images/',
                         }
                     }
                 ]
@@ -37,16 +43,16 @@ module.exports = {
                 test: /\.less/,
                 use: ['style-loader', 'css-loader', 'less-loader'],
                 exclude: /node_modules/,
-                include: path.resolve(__dirname, 'src')
+                include: path.resolve('./src'),
             },
             {
                 test: /\.scss/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
                 exclude: /node_modules/,
-                include: path.resolve(__dirname, 'src')
+                include: path.resolve('./src'),
             },
             // {test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/},
-              {
+            {
                 test: /\.jsx?$/,
                 use: [
                     {
@@ -54,9 +60,19 @@ module.exports = {
                         loader: "happypack/loader?id=JSX"
                     }
                 ],
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                include: path.resolve('./src'),
             }
         ]
+    },
+    resolve: {
+        extensions: [ '.js', '.jsx', '.scss', '.eot', '.ttf', '.svg', '.woff'],
+        alias: {
+            '@': resolve('src'),
+            pages: resolve('src/pages'),
+            components: resolve('src/components'),
+            router: resolve('src/router')
+        }
     },
     plugins: [
         new HtmlWebpackPlugin({

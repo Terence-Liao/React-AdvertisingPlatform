@@ -14,6 +14,7 @@
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="XSLT Stylesheet" />
       </list>
     </option>
   </component>
@@ -33,7 +34,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="D:/xmapp/htdocs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/image" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -43,6 +44,9 @@
     <property name="ts.external.directory.path" value="D:\WebStorm 2019.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\companyProject\React-AdvertisingPlatform(copy)\src\image" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\companyProject\React-AdvertisingPlatform(PC)\src" />
       <recent name="D:\companyProject\React-AdvertisingPlatform(PC)" />
@@ -82,6 +86,7 @@
       <workItem from="1568971738160" duration="1363000" />
       <workItem from="1569202790653" duration="3282000" />
       <workItem from="1569207479649" duration="8673000" />
+      <workItem from="1569292475953" duration="21252000" />
     </task>
     <servers />
   </component>

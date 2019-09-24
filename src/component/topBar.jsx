@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import Typography from '@material-ui/core/Typography';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 
@@ -17,9 +18,6 @@ const useStyles = makeStyles(theme => ({
     title: {
         flexGrow: 1,
     },
-    aliRight: {
-
-    }
 }));
 
 export default function MenuAppBar() {
@@ -44,9 +42,13 @@ export default function MenuAppBar() {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar >
+                    <Typography variant="h6" className={classes.title}>
+
+                    </Typography>
                     {auth && (
                         <div>
                             <IconButton
+                                edge="end" className={classes.menuButton}
                                 aria-label="account of current user"
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
@@ -70,8 +72,9 @@ export default function MenuAppBar() {
                                 open={open}
                                 onClose={handleClose}
                             >
-                                <MenuItem onClick={handleClose}>Profile</MenuItem>
-                                <MenuItem onClick={handleClose}>My account</MenuItem>
+                                <MenuItem onClick={handleClose}>我的订单</MenuItem>
+                                <MenuItem onClick={handleClose}>我的收藏</MenuItem>
+                                <MenuItem onClick={handleClose}>个人中心</MenuItem>
                             </Menu>
                         </div>
                     )}
