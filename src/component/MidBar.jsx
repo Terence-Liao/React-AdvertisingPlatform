@@ -7,7 +7,7 @@ class MidBar extends React.Component{
         return(
             <Container>
                 <Box>
-                    <img src={require('../images/logo.png')} alt="" width='190' height='107'/>
+                    <img src={require('../images/logo.png')} alt="" width='180'/>
                 </Box>
             </Container>
         );
