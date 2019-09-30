@@ -34,7 +34,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="D:/xmapp/htdocs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -89,6 +89,8 @@
       <workItem from="1569292475953" duration="21252000" />
       <workItem from="1569374979521" duration="6369000" />
       <workItem from="1569462982227" duration="3718000" />
+      <workItem from="1569548326732" duration="10000" />
+      <workItem from="1569832666702" duration="1425000" />
     </task>
     <servers />
   </component>
