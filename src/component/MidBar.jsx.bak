@@ -46,10 +46,9 @@ export default function CustomizedInputBase() {
                 <div className="rg-line"></div>
             </Box>
             <Box className={classes.localCss}>
-                <a className="eleMid">
-                    <span className="pad-r5">æ·±åœ³</span>
-                    <i className="triangleBt"></i>
-                </a>
+                <span>
+			ÉîÛÚ	
+                </span>
             </Box>
             <Box className={ classes.insearCss }>
                 <Paper component="form" className={classes.root}>

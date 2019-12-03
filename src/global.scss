@@ -1,4 +1,40 @@
 .icon-rig{
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+/***common css***/
+.eleMid{
+  display: flex;
+  align-items: center;
+}
+.pad-t30{
+  padding-top: 30px;
+}
+.pad-r5{
+  padding-right: 5px;
+}
+.pad-r10{
+  padding-right: 10px;
+}
+.pad-b70{
+  padding-bottom: 70px;
+}
+.pos-r{
+  display: inline-block;
+  position: relative;
+}
+.rg-line{
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 1px;
+  height: 40%;
+  background: #000000;
+}
+.triangleBt{
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-top: 5px solid #ff1243;
 }
