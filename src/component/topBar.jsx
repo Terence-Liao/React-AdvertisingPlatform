@@ -39,11 +39,9 @@ export default function MenuAppBar() {
     }
 
     return (
-        <div className={classes.root}>
-            <AppBar position="static">
+            <AppBar position="static"   className="sameColor">
                 <Toolbar >
                     <Typography variant="h6" className={classes.title}>
-
                     </Typography>
                     {auth && (
                         <div>
@@ -80,7 +78,6 @@ export default function MenuAppBar() {
                     )}
                 </Toolbar>
             </AppBar>
-        </div>
     );
 }
 

@@ -68,38 +68,3 @@ export default function CustomizedInputBase() {
 }
 
 
-/*
-class MidBar extends React.Component{
-
-    render() {
-        return(
-            <Container className="pad-t30 pad-b70 icon-rig">
-                <Box  component="a" className="pos-r pad-r10">
-                    <img src={require('../images/logo.png')} alt="" width='180'/>
-                    <div className="rg-line"></div>
-                </Box>
-                <Box>
-                    <Paper component="form" className={classes.root}>
-                        <IconButton className={classes.iconButton} aria-label="menu">
-                            <MenuIcon />
-                        </IconButton>
-                        <InputBase
-                            className={classes.input}
-                            placeholder="Search Google Maps"
-                            inputProps={{ 'aria-label': 'search google maps' }}
-                        />
-                        <IconButton type="submit" className={classes.iconButton} aria-label="search">
-                            <SearchIcon />
-                        </IconButton>
-                        <Divider className={classes.divider} orientation="vertical" />
-                        <IconButton color="primary" className={classes.iconButton} aria-label="directions">
-                            <DirectionsIcon />
-                        </IconButton>
-                    </Paper>
-                </Box>
-            </Container>
-        );
-    }
-}
-
-export  default MidBar;*/

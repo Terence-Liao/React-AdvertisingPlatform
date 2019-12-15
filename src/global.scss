@@ -4,6 +4,9 @@
   align-items: center;
 }
 /***common css***/
+.sameColor{
+  background-color: #0087ff!important;
+}
 .eleMid{
   display: flex;
   align-items: center;
@@ -16,6 +19,9 @@
 }
 .pad-r10{
   padding-right: 10px;
+}
+.mar-r10{
+  margin-right: 10px;
 }
 .pad-b70{
   padding-bottom: 70px;
