@@ -1,9 +1,10 @@
 import React from 'react';
 import { CssBaseline } from "@material-ui/core";
-import TopBar from './component/TopBar.jsx'
-import MidBar from './component/MidBar.jsx'
-import NavBar from './component/comNav.jsx'
-import Carousel from  './component/comCarousel.jsx'
+import TopBar from 'components/TopBar.jsx'
+import MidBar from 'components/MidBar.jsx'
+import NavBar from 'components/comNav.jsx'
+import Carousel from  'components/comCarousel.jsx'
+import ComMain from 'components/indexMain.jsx'
 class App extends React.Component {
     render() {
         return(
@@ -13,6 +14,7 @@ class App extends React.Component {
             <MidBar />
             <NavBar />
             <Carousel  />
+            <ComMain />
         </React.Fragment>)
     }
 }

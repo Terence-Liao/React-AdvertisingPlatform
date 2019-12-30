@@ -7,9 +7,14 @@ import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
 import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import Popover from '@material-ui/core/Popover';
+import Typography from '@material-ui/core/Typography';
+import PopupState, { bindTrigger, bindPopover,bindMenu } from 'material-ui-popup-state';
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -22,6 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
     spacing: 8
 }));
+
 
 export default function MenuListComposition() {
     const classes = useStyles();
@@ -83,100 +89,102 @@ export default function MenuListComposition() {
             anchorRef.current.focus();
         }
 
-        prevOpen.current = open;
+        prevOpen.current = open;anchorEl
     }, [open]);*/
 
     return (
         <div className='sameColor'>
             <Container className={classes.root}>
-                <Box mr={1} component='div'>
-                    <Button variant="contained" color="primary" className='sameColor'>
-                        首页
-                    </Button>
+
+                <Box mr={1.5} component='div'>
+                    <React.Fragment >
+                        <Button   className='btnCom'>
+                            首页
+                        </Button>
+                    </React.Fragment>
                 </Box>
-                <Box component='div' mr={1}>
-                    <Button
-                        ref={anchorRef1}
-                        aria-haspopup="true"
-                        onClick={handleToggle1}
-                        variant="contained" color="primary" className='sameColor '
-                    >
-                        媒体分类
-                    </Button>
-                    <Popper open={open1}  role={undefined} transition disablePortal>
-                        {({ TransitionProps, placement }) => (
-                            <Grow
-                                {...TransitionProps}
-                            >
-                                <Paper>
-                                    <ClickAwayListener onClickAway={handleClose1}>
-                                        <MenuList  id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                            <MenuItem onClick={handleClose1}>全部</MenuItem>
-                                            <MenuItem onClick={handleClose1}>百叶窗广告道闸</MenuItem>
-                                            <MenuItem onClick={handleClose1}>LCD视频广告道闸</MenuItem>
-                                        </MenuList>
-                                    </ClickAwayListener>
-                                </Paper>
-                            </Grow>
+                <Box mr={1.5} component='div'>
+                    <PopupState variant="popover" popupId="demo-popup-menu">
+                        {popupState => (
+                            <React.Fragment>
+                                <Button  color="primary" {...bindTrigger(popupState)} className='btnCom'>
+                                    区域分类
+                                </Button>
+                                <Popover
+                                    {...bindPopover(popupState)}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'center',
+                                    }}
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'center',
+                                    }}
+                                >
+                                    <MenuList >
+                                        <MenuItem onClick={popupState.close}>全部</MenuItem>
+                                        <MenuItem onClick={popupState.close}>百叶窗广告道闸</MenuItem>
+                                    </MenuList>
+                                </Popover>
+                            </React.Fragment>
                         )}
-                    </Popper>
+                    </PopupState>
                 </Box>
-                <Box component='div' mr={1}>
-                    <Button
-                        ref={anchorRef2}
-                        aria-controls={open2 ? 'menu-list-grow' : undefined}
-                        aria-haspopup="true"
-                        variant="contained" color="primary" className='sameColor'
-                        onClick={handleToggle2}
-                    >
-                        Toggle Menu Grow
-                    </Button>
-                    <Popper open={open2}  role={undefined} transition disablePortal>
-                        {({ TransitionProps, placement }) => (
-                            <Grow
-                                {...TransitionProps}
-                            >
-                                <Paper>
-                                    <ClickAwayListener onClickAway={handleClose2}>
-                                        <MenuList  id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                            <MenuItem onClick={handleClose2}>Profile2</MenuItem>
-                                            <MenuItem onClick={handleClose2}>My account</MenuItem>
-                                            <MenuItem onClick={handleClose2}>Logout</MenuItem>
-                                        </MenuList>
-                                    </ClickAwayListener>
-                                </Paper>
-                            </Grow>
+                <Box mr={1.5} component='div'>
+                    <PopupState variant="popover" popupId="demo-popup-menu">
+                        {popupState => (
+                            <React.Fragment>
+                                <Button  {...bindTrigger(popupState)} className='btnCom'>
+                                    媒体分类
+                                </Button>
+                                <Popover
+                                    {...bindPopover(popupState)}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'center',
+                                    }}
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'center',
+                                    }}
+                                >
+                                    <MenuList >
+                                        <MenuItem onClick={popupState.close}>全部</MenuItem>
+                                        <MenuItem onClick={popupState.close}>百叶窗广告道闸</MenuItem>
+                                    </MenuList>
+                                </Popover>
+                            </React.Fragment>
                         )}
-                    </Popper>
+                    </PopupState>
                 </Box>
-                <Box component='div' mr={1}>
-                    <Button
-                        ref={anchorRef3}
-                        aria-controls={open3 ? 'menu-list-grow' : undefined}
-                        aria-haspopup="true"
-                        variant="contained" color="primary" className='sameColor'
-                        onClick={handleToggle3}
-                    >
-                        Toggle Menu Grow
-                    </Button>
-                    <Popper open={open3}  role={undefined} transition disablePortal>
-                        {({ TransitionProps, placement }) => (
-                            <Grow
-                                {...TransitionProps}
-                            >
-                                <Paper>
-                                    <ClickAwayListener onClickAway={handleClose3}>
-                                        <MenuList  id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                                            <MenuItem onClick={handleClose3}>Profile3</MenuItem>
-                                            <MenuItem onClick={handleClose3}>My account</MenuItem>
-                                            <MenuItem onClick={handleClose3}>Logout</MenuItem>
-                                        </MenuList>
-                                    </ClickAwayListener>
-                                </Paper>
-                            </Grow>
+                <Box mr={1.5} component='div'>
+                    <PopupState variant="popover" popupId="demo-popup-menu">
+                        {popupState => (
+                            <React.Fragment>
+                                <Button   {...bindTrigger(popupState)} className='btnCom'>
+                                    媒体状态
+                                </Button>
+                                <Popover
+                                    {...bindPopover(popupState)}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'center',
+                                    }}
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'center',
+                                    }}
+                                >
+                                    <MenuList >
+                                        <MenuItem onClick={popupState.close}>全部</MenuItem>
+                                        <MenuItem onClick={popupState.close}>百叶窗广告道闸</MenuItem>
+                                    </MenuList>
+                                </Popover>
+                            </React.Fragment>
                         )}
-                    </Popper>
+                    </PopupState>
                 </Box>
+
             </Container>
         </div>
     );

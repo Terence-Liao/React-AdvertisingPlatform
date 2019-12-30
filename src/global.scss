@@ -1,11 +1,20 @@
 .icon-rig{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
+  display: flex!important;
+  justify-content: space-between!important;
+  align-items: center!important;
 }
 /***common css***/
 .sameColor{
   background-color: #0087ff!important;
+}
+.btnCom{
+  color: #ffff!important;
+  border-left: 1px solid #ffff!important;
+  border-right: 1px solid #ffff!important;
+}
+.cardMargin{
+  margin: 10px;
 }
 .eleMid{
   display: flex;
@@ -21,7 +30,10 @@
   padding-right: 10px;
 }
 .mar-r10{
-  margin-right: 10px;
+  margin-right: 10px!important;
+}
+.mar-l10{
+  margin-left: 10px!important;
 }
 .pad-b70{
   padding-bottom: 70px;
